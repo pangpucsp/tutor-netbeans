@@ -5,7 +5,7 @@
 \documentclass[
 	% -- opções da classe memoir --
 	12pt,				% tamanho da fonte
-	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+%	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
 	twoside,			% para impressão em recto e verso. Oposto a oneside
 	a4paper,			% tamanho do papel. 
 	% -- opções da classe abntex2 --
@@ -225,36 +225,36 @@
 % ---
 % Dedicatória
 % ---
-\begin{dedicatoria}
-   \vspace*{\fill}
-   \centering
-   \noindent
-   \textit{ Este trabalho é dedicado aos que acreditam que é divertido resolver problemas com programação.} \vspace*{\fill}
-\end{dedicatoria}
+%\begin{dedicatoria}
+%   \vspace*{\fill}
+%   \centering
+%   \noindent
+%   \textit{ Este trabalho é dedicado aos que acreditam que é divertido resolver problemas com programação.} \vspace*{\fill}
+%\end{dedicatoria}
 % ---
 
 % ---
 % Agradecimentos
 % ---
-\begin{agradecimentos}
-
-Agradeço meus alunos de hoje, de ontem e de amanhã.
-
-\end{agradecimentos}
+%\begin{agradecimentos}
+%
+%Agradeço meus alunos de hoje, de ontem e de amanhã.
+%
+%\end{agradecimentos}
 % ---
 
 % ---
 % Epígrafe
 % ---
-\begin{epigrafe}
-    \vspace*{\fill}
-	\begin{flushright}
-		\textit{``Don\'t Panic!\\
-		Don\'t PANIC! \\
-		DON\'T PANIC! \\
-		(The Hitchhiker\'s Guide to the Galaxy, Douglas Adams)}
-	\end{flushright}
-\end{epigrafe}
+%\begin{epigrafe}
+%    \vspace*{\fill}
+%	\begin{flushright}
+%		\textit{``Don\'t Panic!\\
+%		Don\'t PANIC! \\
+%		DON\'T PANIC! \\
+%		(The Hitchhiker\'s Guide to the Galaxy, Douglas Adams)}
+%	\end{flushright}
+%\end{epigrafe}
 % ---
 
 % ---
@@ -264,31 +264,31 @@ Agradeço meus alunos de hoje, de ontem e de amanhã.
 % resumo em português
 \setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
 \begin{resumo}
-Esta apostila mostra rapidamente como começar a programar na linguagem Java com o uso do netbeans, a IDE (ambiente de desenvolvimento integrado) da Oracle.
+Esta apostila mostra rapidamente como começar a programar na linguagem Java com o uso do NetBeans.
 
  \textbf{Palavras-chave}: Netbeans. Java. Programação. IDE.
 \end{resumo}
 
 % resumo em inglês
-\begin{resumo}[Abstract]
- \begin{otherlanguage*}{english}
-   This booklet summarizes Oracle's tutorial on using netbeans, the IDE (integrated development environment) for Java programming.
-
-   \vspace{\onelineskip}
- 
-   \noindent 
-   \textbf{Keywords}: Netbeans. Java. Programming. IDE.
- \end{otherlanguage*}
-\end{resumo}
+%\begin{resumo}[Abstract]
+% \begin{otherlanguage*}{english}
+%   This booklet summarizes Oracle's tutorial on using netbeans, the IDE (integrated development environment) for Java programming.
+%
+%   \vspace{\onelineskip}
+% 
+%   \noindent 
+%   \textbf{Keywords}: Netbeans. Java. Programming. IDE.
+% \end{otherlanguage*}
+%\end{resumo}
 
 % resumo em francês 
-\begin{resumo}[Résumé]
- \begin{otherlanguage*}{french}
-    Cette brochure résume le tutorial d’Oracle sur l’utilisation de netbeans, l’environnement de développement intégré (IDE) pour la programmation Java.
- 
-   \textbf{Mots-clés}: Netbeans. Java. Programação. IDE.
- \end{otherlanguage*}
-\end{resumo}
+%\begin{resumo}[Résumé]
+% \begin{otherlanguage*}{french}
+%    Cette brochure résume le tutorial d’Oracle sur l’utilisation de netbeans, l’environnement de développement intégré (IDE) pour la programmation Java.
+% 
+%   \textbf{Mots-clés}: Netbeans. Java. Programação. IDE.
+% \end{otherlanguage*}
+%\end{resumo}
 % ---
 
 % ---
@@ -302,9 +302,9 @@ Esta apostila mostra rapidamente como começar a programar na linguagem Java com
 % ---
 % inserir lista de quadros
 % ---
-\pdfbookmark[0]{\listofquadrosname}{loq}
-\listofquadros*
-\cleardoublepage
+%\pdfbookmark[0]{\listofquadrosname}{loq}
+%\listofquadros*
+%\cleardoublepage
 % ---
 
 % ---
@@ -322,6 +322,7 @@ Esta apostila mostra rapidamente como começar a programar na linguagem Java com
   \item[IDE] Integrated Development Environment
   \item[JDK] Java Development Kit
   \item[JRE] Java Realtime Environment
+  \item[JVM] Java Virtual Machine
   \item[SE] Standard Edition
   \item[EE] Enterprise Edition
   \item[ME] Mobile Edition
@@ -360,20 +361,204 @@ Esta apostila mostra rapidamente como começar a programar na linguagem Java com
 \chapter{Introdução}
 % ----------------------------------------------------------
 
-A maioria dos estudantes de cursos superiores da área de computação do Brasil, a partir dos anos 2000 aprende na faculdade a programar em Java. Na proposta inicial da linguagem, o Java era uma linguagem orientada a objetos relativamente simples - Java 1.0.
+A maioria dos estudantes de cursos superiores da área de computação do Brasil, a partir dos anos 2000 aprende na faculdade a programar em Java. Na proposta inicial da linguagem, o Java era uma linguagem orientada a objetos relativamente simples. A primeira versão de Java a 1.0 é de 1995. O JDK 1.0 saiu em janeiro de 1996. No início, a biblioteca contava padrão contava com menos de 1000 classes, nas últimas versões, tem quase um milhão.
 % Com o passar do tempo, alguns dos seus princípios de base foram sendo esquecidos - inexistência de conversão automática de tipos, ... Hoje, perto do final da segunda década do século XXI, o Java se tornou extremamente complexo. Da biblioteca inicial de menos de 1000 classes, hoje o JDK-SE é distribuído com quase um milhão de classes.
 
-No prólogo do livro \cite{livro-bluej}, o chefe do projeto inicial do Java, fala da dificuldade da filha para aprender a linguagem e o que ele percebe é que a dificuldade não é só com o Java, mas com a IDE usada no seu curso. Uma IDE, ambiente integrado de desenvolvimento, é um software bastante complexo que integra diversos outros programas/ferramentas. Às vezes, perde-se mais tempo aprendendo a usar corretamente uma IDE do que com a programação. Esta apostila pretende ensinar os primeiros passos da programação Java com a IDE Netbeans da Oracle.
+No prólogo do livro \cite{livro-bluej}, James Gosling, o chefe do projeto que criou o Java, fala da dificuldade encontrada pela filha dele numa disciplina da faculdade para aprender a linguagem. Ele percebeu que a dificuldade não era com a linguagem, mas com a IDE usada no curso dela. Uma IDE, ambiente integrado de desenvolvimento, é um software bastante complexo que integra diversos programas/ferramentas, como um editor inteligente, os compiladores, um depurador, um navegador de arquivos do projeto, gerenciador de projetos, gerenciador de versões, construtor de distribuição, ... No início, perde-se mais tempo aprendendo a usar corretamente uma IDE do que com a programação. Existem IDEs mais simples como a do BlueJ do livro citado. Vamos cobrir o NetBeans nesta apostila porque das IDEs usadas pelos profissionais que programam em Java, ela é mais simples (com curva de aprendizado menor) e gratuita. As opções são:
+\begin{enumerate}
+\item IDEA da IntelliJ é, provavelmente, a IDE mais completa e poderosa, mas sua versão completa, é paga e a versão comunitária, perde muito das suas vantagens. A versão completa pode ser usada gratuitamente por estudante, participantes de projetos de código aberto e professores.
+\item Eclipse foi durante muito tempo a principal IDE para desenvolvedores Java, mas sua curva de aprendizado é bastante longa. O Eclipse é extremamente poderoso implementando todas as \emph{refatorações} propostas por Fowler.
+\end{enumerate}
 
-Para comparar o uso ou não da IDE, o primeiro programa será mostrado sem o recurso da IDE. Posteriormente, usa-se-á a IDE para mostrar como ela pode ser útil para programações mais avançadas.
+Esta apostila não vai tratar de todos os aspectos do NetBeans, existem muitos tutoriais na Internet para tanto, consulte a própria documentação nos sites: https://netbeans.org/kb/index.html e http://netbeans.apache.org/kb/docs/java/index.html. 
+
+Esta apostila começa com partes do tutorial \cite{netbeans-quick}. Ele é bastante sucinto e a apostila expande alguns dos tópicos dele.
+
+\section{Tutorial de NetBeans }
+O tutorial, \textit{quickstart},  é composto dos seguintes tópicos:
+
+\begin{enumerate}
+\item Configuração do projeto
+\item Adição de código ao arquivo fonte gerado
+\item Compilação e execução da aplicação
+\item Construção e distribuição da aplicação
+\end{enumerate}
+
+Ao concluir esta seção, você terá criado seu primeiro projeto com o NetBeans, uma aplicação em Java que escreve na saída padrão (a console) a mensagem: "Alô, Mamãe!".
+
+Para fazer o que o tutorial propõe, é necessário que o software a seguir esteja instalado
+\footnote{Veja a página \pageref{part:inst} onde a instalação destes softwares é apresentada.},
+\footnote{Nesta apostila não usaremos a última versão do NetBeans,a 10, que está entre os projetos incubados no Apache depois que a Oracle parou de manter a versão comunitária do NetBeans.}:
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{l|l}
+Software requerido & Versão\\
+\hline
+IDE NetBeans (https://netbeans.org/downloads/8.2/) & 8.2\\
+JDK (http://java.sun.com/javase/downloads/) & 8
+\end{tabular}
+\end{center}
+\caption{Criação de Novo Projeto no NetBeans}
+\legend{Fonte: \cite{netbeans-quick}}
+\label{tab:softwares}
+\end{table}
+
+\subsection{Configuração do Projeto}
+
+Para criar um projeto na IDE:
+
+\begin{enumerate}
+\item Inicie a IDE NetBeans
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.3]{new-proj.png} 
+\caption{Localização da instalação da JDK e da JRE sem espaços nos nomes de diretórios}
+\legend{Fonte: \cite{netbeans-quick}}
+\label{fig:newProj}
+\end{center}
+\end{figure}
+
+\item Na IDE, selecione na barra de Menu: \texttt{File > New Project}, ou usando o teclado, ctrl-shift-N. A figura \ref{fig:newProj} mostra a seleção do Novo Projeto nos menus da IDE.
+
+\item No \emph{wizard} para New Project, você verá a ficha para selecionar o tipo de projeto: Java e Java Application, figura \ref{fig:typeProj}. Acione o \textbf{Next}.
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.35]{newProj.png} 
+\caption{Seleção de um projeto de Aplicação Java}
+\legend{Fonte: Snapshot do autor}
+\label{fig:typeProj}
+\end{center}
+\end{figure}
+\item Na ficha \textbf{Name and Location}, você deve selecionar um nome para a aplicação um diretório onde os arquivos do projeto devem ser colocados. A figura \ref{fig:nameProj} mostra o projeto Alo cujos arquivos serão colocados no diretório \texttt{C:$\backslash$Users$\backslash$Pang$\backslash$Documents$\backslash$NetBeansProjects}.
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.3]{proj-step2.png} 
+\caption{Nome e localização da aplicação Java}
+\legend{Fonte: Snapshot do autor}
+\label{fig:nameProj}
+\end{center}
+\end{figure}
+
+Observe que a caixa de \texttt{Create Main Class} está selecionada e tem o nome da classe \texttt{alo.Alo}. Isto significa que o NetBeans vai criar o arquivo Alo.java com um esqueleto da declaração da classe Alo em Java com um método main() nela. Clique no botão Finish para começar a editar o código Java.
+\item O projeto foi criado e é o que está atualmente na área de trabalho do NetBeans. A figura \ref{fig:editScreen} mostra os diferentes componentes da área de trabalho.
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.27]{editScreen.png} 
+\caption{Tela do projeto Alo com a tela de edição.}
+\legend{Fonte: Snapshot do autor}
+\label{fig:editScreen}
+\end{center}
+\end{figure}
+
+\begin{itemize}
+\item A janela Projects contem uma vista em árvore dos componentes do projeto: arquivos fontes (\texttt{Source Packages}), bibliotecas (\texttt{Libraries}), etc.
+\item O editor de arquivos Fontes com o arquivo \texttt{Alo.java} aberto nele e
+\item A janela de Navegação que permite navegar rapidamente entre os elementos dentro da classe selecionada.
+\end{itemize}
+
+\end{enumerate}
+
+\subsection{Adição de código ao arquivo fonte gerado}
+
+Por ter deixado a caixa \texttt{Create Main Class} selecionada, o \textit{wizard} \texttt{New Project} criou um esqueleto da classe. Agora é só acrescentar a mensagem \texttt{"Alô, Mamãe!"} ao código.
+No lugar de:
+\begin{verbatim}
+    // TODO code application logic here
+\end{verbatim}
+coloque a linha:
+\begin{verbatim}
+    System.out.println("Alô, Mamãe");
+\end{verbatim}
+Salve as alterações com \texttt{File > Save}, ou ctrl-S, ou acione o botão(\includegraphics[scale=0.4]{botaoS.png}). A figura \ref{fig:code} mostra o editor com as mudanças;
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.4]{codeAlo.png} 
+\caption{Tela do projeto Alo com a tela de edição.}
+\legend{Fonte: Snapshot do autor}
+\label{fig:code}
+\end{center}
+\end{figure}
+
+Observe que a cor do botão para salvar (\includegraphics[scale=0.4]{botaoS.png}), muda da cor azul para cinza quando os arquivos estão salvos. Além disso, o título da aba do arquivo no editor está em negrito quando o arquivo não está salvo. Ele deixa de estar em negrito quando as mudanças estão salvas.
+
+\subsection{Compilação e execução da aplicação}
+
+Como a IDE tem a propriedade \emph{Compile on Save}, não é necessário compilar o arquivo para executar o programa. Esta propriedade é configurável no menu do projeto (com o mouse sobre o ícone do projeto na janela de projetos, clique o botão da direita do mouse e selecione \texttt{Properties} para entrar na tela de configuração).
+
+\textbf{Para rodar o programa:}
+\begin{enumerate}
+\item Selecione o menu \texttt{Run > Run Project}, ou acione F6.
+\end{enumerate}
+
+Ao executar o programa, o NetBeans vai colocar uma janela da saída (ou de console, se o programa tiver entradas do usuário) abaixo da janela de edição com o conteúdo mostrado na figura \ref{fig:saidaAlo}.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.5]{winOut.png} 
+\caption{Tela de saída da execução do programa Alo.}
+\legend{Fonte: Snapshot do autor}
+\label{fig:saidaAlo}
+\end{center}
+\end{figure}
+
+O editor de código fonte entende a linguagem Java e enquanto o programa é digitado, ele vai verificando a sintaxe. Se ele encontra erros, ele coloca uma marca na numeração da linha de código onde está o erro, figura \ref{fig:errorEd}.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.4]{compErr.png} 
+\caption{Tela de edição do arquivo Alo.java com erro na linha 18.}
+\legend{Fonte: Snapshot do autor}
+\label{fig:errorEd}
+\end{center}
+\end{figure}
+
+\subsection{Construção e distribuição da aplicação}
+
+Depois de escrever e testar sua aplicação, você pode usar o comando \texttt{Clean and Build} para construir sua aplicação para a distribuição. Programas Java são distribuídos em arquivos \texttt{JAR}. Ao executar o comando \texttt{Clean and Build}, a IDE executa um script que:
+\begin{enumerate}
+\item Remove os arquivos de compilações anteriores e a saída de outras construções e
+\item Recompila a aplicação e constrói um arquivo \texttt{JAR} contendo os arquivos compilados.
+\end{enumerate}
+
+Para construir a aplicação:
+\begin{enumerate}
+\item Selecione no menu \texttt{Run > Clean and Build Project}.
+\end{enumerate}
+
+Pode-se ver as saídas da construção através da janela de \texttt{Files}, selecione a aba \texttt{Files} na janela \texttt{Projects} conforme mostra a figura \ref{fig:navFile}. Expanda os nós \texttt{dist} e \texttt{Alo.jar}.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.4]{navFile.png} 
+\caption{Arquivos para distribuição.}
+\legend{Fonte: Snapshot do autor}
+\label{fig:navFile}
+\end{center}
+\end{figure}
+
+O arquivo compilado em bytecode \texttt{Alo.class} está dentro do nó build/classes/alo. O arquivo distribuível \texttt{JAR} contem, também, o arquivo Alo.class compactado como mostra a figura \ref{fig:navFile}. O arquivo \texttt{README.TXT} mostra como usar o arquivo \texttt{JAR}. Como ilustrado na figura \ref{fig:execJar}, onde o arquivo de distribuição \texttt{Alo.jar} é copiado para um outro diretório, \texttt{$\backslash$Windows$\backslash$Temp}, e executado com o interpretador Java.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.4]{execJar.png} 
+\caption{Execução do arquivo JAR.}
+\legend{Fonte: Snapshot do autor}
+\label{fig:execJar}
+\end{center}
+\end{figure}
+
+A seguir, a instalação dos softwares é detalhada e explicações sobre o Java são apresentadas junto com os exemplos. Para concluir esta breve introdução à programação java, veremos como desenvolver e distribuir uma pequena aplicação.
 
 % ----------------------------------------------------------
 % PARTE
 % ----------------------------------------------------------
-\part{Instalação dos softwares necessários}
+%\part{Instalação dos softwares necessários} 
 % ----------------------------------------------------------
 
-\chapter{Instalação do JDK}
+\chapter{Instalação do JDK} \label{part:inst}
 
 Para poder programar em Java, o computador do aluno precisa ter instalado o JDK-SE, Java Development Kit - Standard Edition. O JDK inclui o programa compilador (javac), a biblioteca padrão chamada de Edição Padrão (SE - Standard Edition), esta é a biblioteca para desenvolvimento de aplicações para computadores de mesa, desktops, e computadores portáveis, laptops e notebooks. As outras bibliotecas são a EE, Enterprise Edition, para o desenvolvimento de aplicações para empresas e a ME, Mobile Edition, para o desenvolvimento de aplicações para dispositivos móveis. O JDK inclui também a JRE, Java Runtime Environment, que seu computador já deve ter para rodar aplicações Java, como o programa da receita federal. É importante que a JRE seja compatível com o compilador e as outras bibliotecas.
 
@@ -435,10 +620,46 @@ Dê \texttt{OK} para as mudanças. Feche as janela de \texttt{Prompt do DOS} e a
 \end{center}
 \end{figure}
 
+Para testar sua instalação, escreva o programa abaixo no \texttt{Bloco de Notas} (\texttt{Notepad}) do MS Windows. Veja a figura \ref{fig:notepad}. Salve o arquivo Alo.java numa pasta na qual você pode escrever, no caso, o arquivo foi salvo em \texttt{C:$\backslash$Users$\backslash$Pang$\backslash$Alo.java}.
+\label{prog:Alo1}
+\begin{verbatim}
+class Alo {
+  public static void main(String[] args) {
+    System.out.println("Alô, Mamãe!");
+  }
+}
+\end{verbatim}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.4]{notepadAlo.png} 
+\caption{Edição do programa Alo no bloco de notas do MS Windows.}
+\legend{Fonte: Snapshot do autor}
+\label{fig:notepad}
+\end{center}
+\end{figure}
+
+Compile e execute como mostrado na figura \ref{fig:dosExecAlo}.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.4]{compErunAlo.png} 
+\caption{Compilação e execução de Alo.java no Prompt do DOS.}
+\legend{Fonte: Snapshot do autor}
+\label{fig:dosExecAlo}
+\end{center}
+\end{figure}
+
+O comando \texttt{javac Alo.java} compila o arquivo \texttt{Alo.java} e gera o arquivo compilado em bytecode \texttt{Alo.class}. Para executar o bytecode, é necessário usar o programa \texttt{java}, que implementa a JVM, com o \texttt{Alo} como argumento. Observe que não se escreve a extensão \texttt{.class}. A saída do programa é a mensagem "Alô, Mamãe!". O comando \texttt{dir Alo.*} lista os 2 arquivos: o código fonte, \texttt{Alo.java} e o compilado em \textit{bytecode}, \texttt{Alo.class}. Podemos comparar os 2 programas Alo que foram escritos até agora e as ferramentas utilizadas. Ambos programas das páginas \pageref{fig:code} e \pageref{prog:Alo1} fazem a mesma coisa, imprimem a mensagem "Alô, Mamãe!" na tela de saída.
+
+A linguagem Java é orientada a objetos, isto significa que escrevemos programas Java, escrevendo classes. Uma aplicação Java é um programa que é executado como mostrado na figura \ref{fig:dosExecAlo}. Para isto, o arquivo .class corresponde a uma classe definida num arquivo fonte com um método estático de nome \texttt{main}. 
+
+
+
 % ----------------------------------------------------------
 % PARTE
 % ----------------------------------------------------------
-\part{Escrita, compilação e execução dos primeiros programas}
+%\part{Escrita, compilação e execução dos primeiros programas}
 % ----------------------------------------------------------
 
 
