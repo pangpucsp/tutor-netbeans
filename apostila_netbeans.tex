@@ -1,6 +1,3 @@
-%% abtex2-modelo-trabalho-academico.tex, v-1.9.7 laurocesar
-%% Copyright 2012-2018 by abnTeX2 group at http://www.abntex.net.br/ 
-%%
 % usando o modelo de trabalho acadêmico da ABNTex 2
 \documentclass[
 	% -- opções da classe memoir --
@@ -65,7 +62,7 @@
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
-\titulo{Apostila de Netbeans para Novatos de Programação Java}
+\titulo{Apostila de Netbeans para Novatos}
 \autor{Paulino Ng}
 \local{Brasil}
 \data{2019, v-0.5.0}
@@ -79,9 +76,6 @@
 
 \preambulo{Esta apostila visa mostrar aos novatos em programação como usar o Netbeans da Oracle como ambiente de desenvolvimento para programação Java.}
 
-% ---
-% Configurações de aparência do PDF final
-
 % alterando o aspecto da cor azul
 \definecolor{blue}{RGB}{41,5,195}
 
@@ -93,7 +87,7 @@
 		pdfauthor={\@author},
     	pdfsubject={\imprimirpreambulo},
 	    pdfcreator={LaTeX with abnTeX2},
-		pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
+		pdfkeywords={Netbeans}{programação}{Java}{C}{C++}, 
 		colorlinks=true,       		% false: boxed links; true: colored links
     	linkcolor=blue,          	% color of internal links
     	citecolor=blue,        		% color of links to bibliography
@@ -129,11 +123,8 @@
 \renewcommand*{\cftquadroaftersnum}{\hfill--\hfill}
 
 \setfloatlocations{quadro}{hbtp} % Ver https://github.com/abntex/abntex2/issues/176
-% ---
-
-% --- 
+ 
 % Espaçamentos entre linhas e parágrafos 
-% --- 
 
 % O tamanho do parágrafo é dado por:
 \setlength{\parindent}{1.3cm}
@@ -141,15 +132,9 @@
 % Controle do espaçamento entre um parágrafo e outro:
 \setlength{\parskip}{0.2cm}  % tente também \onelineskip
 
-% ---
 % compila o indice
-% ---
 \makeindex
-% ---
 
-% ----
-% Início do documento
-% ----
 \begin{document}
 
 % Seleciona o idioma do documento (conforme pacotes do babel)
@@ -158,28 +143,18 @@
 % Retira espaço extra obsoleto entre as frases.
 \frenchspacing 
 
-% ----------------------------------------------------------
 % ELEMENTOS PRÉ-TEXTUAIS
-% ----------------------------------------------------------
-% \pretextual
+\pretextual
 
-% ---
 % Capa
-% ---
 \imprimircapa
-% ---
 
-% ---
 % Folha de rosto
 % (o * indica que haverá a ficha bibliográfica)
-% ---
 \imprimirfolhaderosto*
-% ---
+%\imprimirfolhaderosto
 
-% ---
 % Inserir a ficha bibliografica
-% ---
-
 % Isto é um exemplo de Ficha Catalográfica, ou ``Dados internacionais de
 % catalogação-na-publicação''. Você pode utilizar este modelo como referência. 
 % Porém, provavelmente a biblioteca da sua universidade lhe fornecerá um PDF
@@ -195,7 +170,7 @@
 	\sffamily
 	\vspace*{\fill}					% Posição vertical
 	\begin{center}					% Minipage Centralizado
-	\fbox{\begin{minipage}[c][8cm]{13.5cm}		% Largura
+	\fbox{\begin{minipage}[c][6cm]{15.5cm}		% Largura
 	\small
 	\imprimirautor
 	%Sobrenome, Nome do autor
@@ -214,7 +189,8 @@
 	\hspace{0.5cm}
 		1. Netbeans.
 		2. Programação.
-		2. Java.
+		2.1. Java.
+		2.2. C/C++
 		I. Pang Co.
 		II. Apostila Netbeans 			
 	\end{minipage}}
@@ -246,47 +222,45 @@
 % ---
 % Epígrafe
 % ---
-%\begin{epigrafe}
-%    \vspace*{\fill}
-%	\begin{flushright}
-%		\textit{``Don\'t Panic!\\
-%		Don\'t PANIC! \\
-%		DON\'T PANIC! \\
-%		(The Hitchhiker\'s Guide to the Galaxy, Douglas Adams)}
-%	\end{flushright}
-%\end{epigrafe}
-% ---
+\begin{epigrafe}
+    \vspace*{\fill}
+	\begin{flushright}
+		\textit{``Don\'t Panic!\\
+		Don\'t PANIC! \\
+		DON\'T PANIC! \\
+		(The Hitchhiker\'s Guide to the Galaxy, Douglas Adams)}
+	\end{flushright}
+\end{epigrafe}
 
-% ---
 % RESUMOS
-% ---
 
 % resumo em português
+\pagebreak 
 \setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
 \begin{resumo}
-Esta apostila mostra rapidamente como começar a programar na linguagem Java com o uso do NetBeans.
+Esta apostila mostra rapidamente como começar a programar usando o Netbeans. Exemplos são dados tanto para a programação na linguagem Java, como em C/C++.
 
- \textbf{Palavras-chave}: Netbeans. Java. Programação. IDE.
+ \textbf{Palavras-chave}: Netbeans. Programação. IDE. Java. C/C++.
 \end{resumo}
 
 % resumo em inglês
 %\begin{resumo}[Abstract]
 % \begin{otherlanguage*}{english}
-%   This booklet summarizes Oracle's tutorial on using netbeans, the IDE (integrated development environment) for Java programming.
+%   This booklet is a very small tutorial on using Oracle's Netbeans, the IDE (integrated development environment) for Java programming. It presents also how to use Netbeans as a IDE to program C/C++.
 %
 %   \vspace{\onelineskip}
 % 
 %   \noindent 
-%   \textbf{Keywords}: Netbeans. Java. Programming. IDE.
+%   \textbf{Keywords}: Netbeans. Java. Programming. IDE. C/C++.
 % \end{otherlanguage*}
 %\end{resumo}
 
 % resumo em francês 
 %\begin{resumo}[Résumé]
 % \begin{otherlanguage*}{french}
-%    Cette brochure résume le tutorial d’Oracle sur l’utilisation de netbeans, l’environnement de développement intégré (IDE) pour la programmation Java.
+%    Cette brochure résume le tutorial d’Oracle sur l’utilisation de netbeans, l’environnement de développement intégré (IDE) pour la programmation Java. On presente aussi l'utilisation pour la programmation C/C++.
 % 
-%   \textbf{Mots-clés}: Netbeans. Java. Programação. IDE.
+%   \textbf{Mots-clés}: Netbeans. Java. Programação. IDE. C/C++.
 % \end{otherlanguage*}
 %\end{resumo}
 % ---
@@ -319,13 +293,14 @@ Esta apostila mostra rapidamente como começar a programar na linguagem Java com
 % inserir lista de abreviaturas e siglas
 % ---
 \begin{siglas}
-  \item[IDE] Integrated Development Environment
-  \item[JDK] Java Development Kit
-  \item[JRE] Java Realtime Environment
-  \item[JVM] Java Virtual Machine
-  \item[SE] Standard Edition
-  \item[EE] Enterprise Edition
-  \item[ME] Mobile Edition
+  \item[IDE] Integrated Development Environment, Ambiente de Desenvolvimento Integrado
+  \item[JDK] Java Development Kit, Conjunto de Desenvolvimento Java
+  \item[JRE] Java Realtime Environment, Ambiente de Execução (Tempo Real) do Java
+  \item[JVM] Java Virtual Machine, Máquina Virtual Java
+  \item[SE] Standard Edition, Edição Padrão
+  \item[EE] Enterprise Edition, Edição Empresa
+  \item[ME] Mobile Edition, Edição Portátil
+  \item[C/C++] Linguagens de programação C e C++
 \end{siglas}
 % ---
 
@@ -361,16 +336,27 @@ Esta apostila mostra rapidamente como começar a programar na linguagem Java com
 \chapter{Introdução}
 % ----------------------------------------------------------
 
-A maioria dos estudantes de cursos superiores da área de computação do Brasil, a partir dos anos 2000 aprende na faculdade a programar em Java. Na proposta inicial da linguagem, o Java era uma linguagem orientada a objetos relativamente simples. A primeira versão de Java a 1.0 é de 1995. O JDK 1.0 saiu em janeiro de 1996. No início, a biblioteca contava padrão contava com menos de 1000 classes, nas últimas versões, tem quase um milhão.
+A maioria dos estudantes de cursos superiores da área de computação do Brasil, a partir dos anos 2000 aprende na faculdade a programar em Java. Na proposta inicial da linguagem, o Java era uma linguagem orientada a objetos relativamente simples. A primeira versão pública de Java, a 1.0, é de 1995. O \emph{kit de desenvolvimento Java}, o JDK, 1.0 saiu em janeiro de 1996. No início, a biblioteca contava padrão contava com menos de 1000 classes, nas últimas versões no início de 2019, esta biblioteca tem quase um milhão de classes.
 % Com o passar do tempo, alguns dos seus princípios de base foram sendo esquecidos - inexistência de conversão automática de tipos, ... Hoje, perto do final da segunda década do século XXI, o Java se tornou extremamente complexo. Da biblioteca inicial de menos de 1000 classes, hoje o JDK-SE é distribuído com quase um milhão de classes.
 
-No prólogo do livro \cite{livro-bluej}, James Gosling, o chefe do projeto que criou o Java, fala da dificuldade encontrada pela filha dele numa disciplina da faculdade para aprender a linguagem. Ele percebeu que a dificuldade não era com a linguagem, mas com a IDE usada no curso dela. Uma IDE, ambiente integrado de desenvolvimento, é um software bastante complexo que integra diversos programas/ferramentas, como um editor inteligente, os compiladores, um depurador, um navegador de arquivos do projeto, gerenciador de projetos, gerenciador de versões, construtor de distribuição, ... No início, perde-se mais tempo aprendendo a usar corretamente uma IDE do que com a programação. Existem IDEs mais simples como a do BlueJ do livro citado. Vamos cobrir o NetBeans nesta apostila porque das IDEs usadas pelos profissionais que programam em Java, ela é mais simples (com curva de aprendizado menor) e gratuita. As opções são:
+No prólogo do livro \cite{livro-bluej}, James Gosling, o chefe do projeto que criou o Java, fala da dificuldade encontrada pela filha dele numa disciplina de programação Java da faculdade. Ele percebeu que a dificuldade não era com a linguagem, mas com a IDE usada no curso dela. Uma IDE, ambiente integrado de desenvolvimento, é um software bastante complexo que integra diversos programas/ferramentas, como um editor inteligente, os compiladores, um depurador, um navegador de arquivos do projeto, gerenciador de projetos, gerenciador de versões, construtor de distribuição, ... No início, perde-se mais tempo aprendendo a usar corretamente uma IDE do que com a programação. Existem IDEs mais simples como a do BlueJ do livro citado. Vamos cobrir o NetBeans nesta apostila porque das IDEs usadas pelos profissionais que programam em Java, ela é uma das mais simples (com curva de aprendizado menor), poderosa e gratuita. As opções são:
 \begin{enumerate}
 \item IDEA da IntelliJ é, provavelmente, a IDE mais completa e poderosa, mas sua versão completa, é paga e a versão comunitária, perde muito das suas vantagens. A versão completa pode ser usada gratuitamente por estudante, participantes de projetos de código aberto e professores.
 \item Eclipse foi durante muito tempo a principal IDE para desenvolvedores Java, mas sua curva de aprendizado é bastante longa. O Eclipse é extremamente poderoso implementando todas as \emph{refatorações} propostas por Fowler.
 \end{enumerate}
 
-Esta apostila não vai tratar de todos os aspectos do NetBeans, existem muitos tutoriais na Internet para tanto, consulte a própria documentação nos sites: https://netbeans.org/kb/index.html e http://netbeans.apache.org/kb/docs/java/index.html. 
+\section{Conceitos básicos sobre IDEs}
+
+Antes de começar a estudar a IDE, vamos rever alguns conceitos básicos. O Java é uma linguagem orientada a objetos, compilada e interpretada. Os aspectos de orientação a objetos interessam mais para projeto de software e podem ser vistos nos livros, ou cursos, sobre Engenharia de Software e Programação Orientada a Objetos. Algo que pode causar estranheza aos novatos é o fato do Java ser compilado e interpretado. Os programas em Java definem classes e essas classes devem ser compiladas para serem executadas. Diferente de C/C++, Objective-C, Fortran, Pascal, etc., o código compilado não é executável na plataforma\footnote{Uma plataforma é constituída pela dupla arquitetura do processador e sistema operacional. Assim, nos PCs, em geral, temos a plataforma Intel 64 bits e MS Windows, ou Intel 64 bits e Linux e nos computadores da Apple, processador Intel 64 bits e MacOS.}. O código é compilado em Bytecodes que devem ser interpretados por uma JVM, Java Virtual Machine. A vantagem teórica desta estratégia é que o código compilado pode ser executado em qualquer plataforma com uma JVM compatível.
+
+\emph{Java é compilado}, isto significa, que para executar código Java é necessário compilar um código fonte. Uma IDE deve sempre incluir, as vezes, é só o que ela tem, um \textbf{editor de texto} para facilitar a edição do código fonte. O código fonte é um texto na linguagem de programação. O editor da IDE deve entender partes da sintaxe e gramática da linguagem e com isto auxiliar o programador. A maioria dos editores gráficos das IDEs conhece as palavras chaves da linguagem de programação e usa esquemas de cores para identificar mais facilmente estas palavras-chaves. Muitos editores de IDEs possuem também a capacidade de completar automaticamente um texto. À medida que o programador vai datilografando o código, o editor compara o texto com textos existentes na sua memória e propõe maneiras de completá-lo. O programador pode aceitar alguma proposta, ou simplesmente continuar datilografando e ignorar as propostas.
+
+A IDE deve facilitar o acionamento das ferramentas de desenvolvimento como: \textit{compilador}, \emph{depulador}, ... Isto é, deve ser possível acionar estas ferramentas de dentro da IDE. Nos velhos tempos, quando não existiam IDEs, era necessário editar o texto (sem auxílios de linguagem). Salvá-lo, sair do editor, compilar na interface de linha, observar os erros e as linhas suspeitas anunciadas pelo compilador, voltar ao editor, encontrar as linhas com problemas, corrigir, salvar, sair do editor, recompilar e repetir este processos até o programa funcionar. Com as IDEs, a compilação do programa e sua execução podem ser feitas diretamente dentro da IDE sem ter de sair e rodar outros programas um de cada vez. Algumas IDEs já vem com algumas de suas ferramentas embutidas (o Visual Studio Code da Microsoft e o Xcode da Apple, por exemplo), outras vezes, a IDE depende da pré instalação destas ferramentas, caso do Netbeans e do Eclipse.
+
+Algumas IDEs se prestam apenas para programar numa linguagem, outras podem ser usadas com diversas linguagens de programação. O Netbeans se presta para programar Java, aplicações JEE (Java Enterprise Edition), HTML, CSS, JavaScript, PHP, C e C++. Como Gosling identificou, o aprendizado de IDEs pode ser muito longo, assim, se precisamos aprender várias linguagens, é mais eficiente usar uma mesma IDE para todas. Observe que Eclipse, IDEA e outras IDEs podem ser usadas para várias linguagens de programação. O artigo https://en.wikipedia.org/wiki/Comparison\_of\_integrated\_development\_environments da wikipedia dá uma visão mais completa das IDEs e linguagens de programação.
+
+Esta apostila não vai tratar de todos os aspectos do NetBeans, existem muitos tutoriais na Internet para tanto, consulte a própria documentação nos sites:\\
+https://netbeans.org/kb/index.html e http://netbeans.apache.org/kb/docs/java/index.html. 
 
 Esta apostila começa com partes do tutorial \cite{netbeans-quick}. Ele é bastante sucinto e a apostila expande alguns dos tópicos dele.
 
@@ -431,7 +417,9 @@ Para criar um projeto na IDE:
 \label{fig:typeProj}
 \end{center}
 \end{figure}
-\item Na ficha \textbf{Name and Location}, você deve selecionar um nome para a aplicação um diretório onde os arquivos do projeto devem ser colocados. A figura \ref{fig:nameProj} mostra o projeto Alo cujos arquivos serão colocados no diretório \texttt{C:$\backslash$Users$\backslash$Pang$\backslash$Documents$\backslash$NetBeansProjects}.
+\item Na ficha \textbf{Name and Location}, você deve selecionar um nome para a aplicação um diretório onde os arquivos do projeto devem ser colocados. A figura \ref{fig:nameProj} mostra o projeto Alo cujos arquivos serão colocados no diretório \\
+\texttt{C:$\backslash$Users$\backslash$Pang$\backslash$Documents$\backslash$NetBeansProjects}.
+
 \begin{figure}[h]
 \begin{center}
 \includegraphics[scale=0.3]{proj-step2.png} 
@@ -558,8 +546,9 @@ A seguir, a instalação dos softwares é detalhada e explicações sobre o Java
 %\part{Instalação dos softwares necessários} 
 % ----------------------------------------------------------
 
-\chapter{Instalação do JDK} \label{part:inst}
+\chapter{Instalação dos softwares necessários} \label{part:inst}
 
+\section{Instalação do JDK}
 Para poder programar em Java, o computador do aluno precisa ter instalado o JDK-SE, Java Development Kit - Standard Edition. O JDK inclui o programa compilador (javac), a biblioteca padrão chamada de Edição Padrão (SE - Standard Edition), esta é a biblioteca para desenvolvimento de aplicações para computadores de mesa, desktops, e computadores portáveis, laptops e notebooks. As outras bibliotecas são a EE, Enterprise Edition, para o desenvolvimento de aplicações para empresas e a ME, Mobile Edition, para o desenvolvimento de aplicações para dispositivos móveis. O JDK inclui também a JRE, Java Runtime Environment, que seu computador já deve ter para rodar aplicações Java, como o programa da receita federal. É importante que a JRE seja compatível com o compilador e as outras bibliotecas.
 
 No momento da escrita desta apostila, existem diversos JDK SE, versões que vão da 6 a 11. Como uma extensão da disciplina, vai levar ao uso do Java EE, a versão mais avançada do Java EE é a 8. Assim, será exemplificado a seguir a instalação do JDK 8. Que pode ser baixado de:
@@ -654,6 +643,26 @@ O comando \texttt{javac Alo.java} compila o arquivo \texttt{Alo.java} e gera o a
 
 A linguagem Java é orientada a objetos, isto significa que escrevemos programas Java, escrevendo classes. Uma aplicação Java é um programa que é executado como mostrado na figura \ref{fig:dosExecAlo}. Para isto, o arquivo .class corresponde a uma classe definida num arquivo fonte com um método estático de nome \texttt{main}. 
 
+\section{Instalação do Netbeans 8.2}
+
+Baixe o instalador do Netbeans a partir de https://netbeans.org/downloads/8.2/. Esta é a última versão comunitária do Netbeans da Oracle. As versões, a partir da 9.0, são de um projeto Apache.
+Para ter uma maior estabilidade, esta vai ser a versão usada aqui. A mais nova versão, de 04/2019, a 11, pode dar suporte a características mais recentes, use-a se você precisar destas características.
+
+Existem várias opções de Netbeans que precisam ser selecionadas antes de baixar o instalador:
+\begin{itemize}
+\item Língua do Netbeans: existem 5 opções oficiais e muitas contribuições. Escolha \textbf{Português(Brasil)} ou English, de acordo com a sua preferência. Eu costumo escolher inglês porque sofro menos com as traduções bizarras.
+\item Plataforma: a plataforma em que o Netbeans vai executar, geralmente, \textbf{Windows}.
+\item A figura \ref{fig:nb_bundles} mostra diversas opções de pacotes, o espaço disco que estes pacotes vão ocupar e as tecnologias embutidas neles. A menos que você tenha pouco espaço no disco e seu processador seja muito lento, escolha a opção \textbf{All}.
+\end{itemize}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.4]{NB_bundles.png} 
+\caption{Pacotes do Netbeans.}
+\legend{Fonte: Snapshot do autor}
+\label{fig:nb_bundles}
+\end{center}
+\end{figure}
 
 
 % ----------------------------------------------------------
