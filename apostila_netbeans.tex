@@ -5,11 +5,6 @@
 %	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
 	twoside,			% para impressão em recto e verso. Oposto a oneside
 	a4paper,			% tamanho do papel. 
-	% -- opções da classe abntex2 --
-	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
-	%section=TITLE,		% títulos de seções convertidos em letras maiúsculas
-	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
-	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
 	% -- opções do pacote babel --
 	english,			% idioma adicional para hifenização
 	french,				% idioma adicional para hifenização
@@ -659,11 +654,23 @@ Existem várias opções de Netbeans que precisam ser selecionadas antes de baix
 \begin{center}
 \includegraphics[scale=0.4]{NB_bundles.png} 
 \caption{Pacotes do Netbeans.}
-\legend{Fonte: Snapshot do autor}
+\legend{Fonte: https://netbeans.org/downloads/8.2/}
 \label{fig:nb_bundles}
 \end{center}
 \end{figure}
 
+\section{Instalação das ferramentas de C/C++ no MS Windows}
+
+No linux, as ferramentas de desenvolvimento, em geral, já estão instaladas. No MS Windows, a 
+instalação destas ferramentas pode ser um pouco complicada. Vamos usar aqui a instalação
+mais simples que encontramos, provavelmente não é a melhor. Vamos instalar o Cygwin64 com as
+ferramentas de desenvolvimento C/C++ da GNU. Esta é uma das opções dada pelo site do Netbeans.
+
+Para instalar o Cygwin64, baixe o instalador em xxx
+Execute o instalador como administrador do sistema, para poder atualizar a variável de ambiente
+PATH para todos os usuários.
+
+xxx
 
 % ----------------------------------------------------------
 % PARTE
@@ -676,18 +683,18 @@ Existem várias opções de Netbeans que precisam ser selecionadas antes de baix
 % ----------------------------------------------------------
 % PARTE
 % ----------------------------------------------------------
-\part{Resultados}
+%\part{Resultados}
 % ----------------------------------------------------------
 
 % ---
 % primeiro capitulo de Resultados
 % ---
-\chapter{Lectus lobortis condimentum}
+%\chapter{Lectus lobortis condimentum}
 % ---
 
 % ---
-\section{Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-posuere cubilia Curae}
+%\section{Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+%posuere cubilia Curae}
 % ---
 
 % ----------------------------------------------------------
@@ -700,7 +707,7 @@ posuere cubilia Curae}
 % ---
 % Conclusão
 % ---
-\chapter{Conclusão}
+%\chapter{Conclusão}
 % ---
 
 %\lipsum[31-33]
@@ -731,24 +738,24 @@ posuere cubilia Curae}
 % ---
 % Inicia os apêndices
 % ---
-\begin{apendicesenv}
+%\begin{apendicesenv}
 
 % Imprime uma página indicando o início dos apêndices
-\partapendices
+%\partapendices
 
 % ----------------------------------------------------------
-\chapter{Quisque libero justo}
+%\chapter{Quisque libero justo}
 % ----------------------------------------------------------
 
 %\lipsum[50]
 
 % ----------------------------------------------------------
-\chapter{Nullam elementum urna vel imperdiet sodales elit ipsum pharetra ligula
-ac pretium ante justo a nulla curabitur tristique arcu eu metus}
+%\chapter{Nullam elementum urna vel imperdiet sodales elit ipsum pharetra ligula
+%ac pretium ante justo a nulla curabitur tristique arcu eu metus}
 % ----------------------------------------------------------
 %\lipsum[55-57]
 
-\end{apendicesenv}
+%\end{apendicesenv}
 % ---
 
 
@@ -759,36 +766,36 @@ ac pretium ante justo a nulla curabitur tristique arcu eu metus}
 % ---
 % Inicia os anexos
 % ---
-\begin{anexosenv}
+%\begin{anexosenv}
 
 % Imprime uma página indicando o início dos anexos
-\partanexos
+%\partanexos
 
 % ---
-\chapter{Morbi ultrices rutrum lorem.}
+%\chapter{Morbi ultrices rutrum lorem.}
 % ---
 %\lipsum[30]
 
 % ---
-\chapter{Cras non urna sed feugiat cum sociis natoque penatibus et magnis dis
-parturient montes nascetur ridiculus mus}
+%\chapter{Cras non urna sed feugiat cum sociis natoque penatibus et magnis dis
+%parturient montes nascetur ridiculus mus}
 % ---
 
 %\lipsum[31]
 
 % ---
-\chapter{Fusce facilisis lacinia dui}
+%\chapter{Fusce facilisis lacinia dui}
 % ---
 
 %\lipsum[32]
 
-\end{anexosenv}
+%\end{anexosenv}
 
 %---------------------------------------------------------------------
 % INDICE REMISSIVO
 %---------------------------------------------------------------------
-\phantompart
-\printindex
+%\phantompart
+%\printindex
 %---------------------------------------------------------------------
 
 \end{document}
