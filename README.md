@@ -5,3 +5,4 @@ NetBeans 8.2 da Oracle. Quando apropriado, será feita uma adaptação ao NetBea
 do Apache.
 
 - [Ensaio de apostila](apostila_netbeans.pdf)
+- [Tutorial sobre instalação de PHP](https://netbeans.org/kb/docs/php/configure-php-environment-windows_pt_BR.html)
